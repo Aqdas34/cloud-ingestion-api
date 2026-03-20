@@ -1,0 +1,17 @@
+[Unit]
+Description=MasterMonitor Cloud Ingestion API
+After=network.target
+
+[Service]
+# Working directory in your home folder
+WorkingDirectory=%h/CloudIngestionAPI
+Environment="PATH=%h/CloudIngestionAPI/venv/bin"
+# Use SQLite for now (automatic) or set DATABASE_URL here for PostgreSQL
+Environment="DATABASE_URL=sqlite:///%h/CloudIngestionAPI/mastermonitor.db"
+Environment="MASTER_MONITOR_API_KEY=dev-key-change-me-in-production"
+
+ExecStart=%h/CloudIngestionAPI/venv/bin/uvicorn main:app --host 0.0.0.0 --port 8000
+Restart=always
+
+[Install]
+WantedBy=default.target
