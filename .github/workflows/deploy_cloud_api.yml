@@ -30,7 +30,10 @@ jobs:
             git fetch origin main
             git reset --hard origin/main
             
-            # 2. Handle Virtual Environment
+            # 2. Create .env from GitHub Secret
+            echo "MASTER_MONITOR_API_KEY=${{ secrets.MASTER_MONITOR_API_KEY }}" > .env
+            
+            # 3. Handle Virtual Environment
             if [ ! -d "venv" ]; then
               python3 -m venv venv
             fi

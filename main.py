@@ -1,11 +1,16 @@
 import logging
 import requests
+from dotenv import load_dotenv
+load_dotenv()
 from contextlib import asynccontextmanager
 from datetime import datetime, timezone
 
 from fastapi import FastAPI, Depends, HTTPException, Request
 from fastapi.responses import JSONResponse
 from fastapi.middleware.cors import CORSMiddleware
+from slowapi import Limiter, _rate_limit_exceeded_handler
+from slowapi.util import get_remote_address
+from slowapi.errors import RateLimitExceeded
 from sqlalchemy.orm import Session
 
 from auth import verify_api_key
@@ -50,6 +55,7 @@ def send_push_notification(token: str, title: str, body: str):
 
 
 # --- FastAPI App ---
+limiter = Limiter(key_func=get_remote_address)
 app = FastAPI(
     title="MasterMonitor Cloud Ingestion API",
     description=(
@@ -59,6 +65,8 @@ app = FastAPI(
     version="1.0.0",
     lifespan=lifespan,
 )
+app.state.limiter = limiter
+app.add_exception_handler(RateLimitExceeded, _rate_limit_exceeded_handler)
 
 # Allow the web dashboard to call the API from any local origin
 app.add_middleware(
@@ -80,7 +88,9 @@ app.add_middleware(
     summary="Receive sensor data from a Local Monitor Server",
     tags=["Ingestion"],
 )
+@limiter.limit("5/second")
 async def receive_data(
+    request: Request,
     payload: DevicePayload,
     db: Session = Depends(get_db),
     _api_key: str = Depends(verify_api_key),

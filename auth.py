@@ -6,7 +6,7 @@ from fastapi.security.api_key import APIKeyHeader
 # The API key is loaded from an environment variable for security.
 # Default to a random key if not set (for development).
 # For production, set the MASTER_MONITOR_API_KEY environment variable.
-API_KEY = os.getenv("MASTER_MONITOR_API_KEY", "dev-key-change-me-in-production")
+API_KEY = os.getenv("MASTER_MONITOR_API_KEY")
 API_KEY_HEADER = APIKeyHeader(name="X-API-Key", auto_error=False)
 
 
