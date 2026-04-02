@@ -1,5 +1,7 @@
 import logging
 import requests
+import json
+import os
 from dotenv import load_dotenv
 load_dotenv()
 from contextlib import asynccontextmanager
@@ -132,6 +134,7 @@ async def receive_data(
                 noise_level=reading.NoiseLevel,
                 horn_hush=reading.HornHush,
                 test=reading.Test,
+                sensors_json=json.dumps(reading.sensors) if reading.sensors else None,
             )
             db_readings.append(db_reading)
 
@@ -333,6 +336,7 @@ async def get_device_readings(
             "noise_level": r.noise_level,
             "alarm": r.alarm,
             "pressure": r.pressure,
+            "sensors": json.loads(r.sensors_json) if r.sensors_json else None,
         }
         for r in readings
     ]
@@ -373,7 +377,24 @@ async def get_latest_reading(
         "noise_level": reading.noise_level,
         "alarm": reading.alarm,
         "pressure": reading.pressure,
+        "sensors": json.loads(reading.sensors_json) if reading.sensors_json else None,
     }
+
+# ==============================================================================
+# CATALOGUE ENDPOINTS
+# ==============================================================================
+
+@app.get("/sensor-types", tags=["Catalogue"])
+async def get_sensor_types(_api_key: str = Depends(verify_api_key)):
+    """Returns the master catalogue of supported external sensor types."""
+    try:
+        # Load from the local docs folder
+        path = os.path.join(os.path.dirname(__file__), "docs", "sensor_types_export.json")
+        with open(path, "r", encoding="utf-8") as f:
+            return json.load(f)
+    except Exception as e:
+        logger.error(f"Failed to load sensor types: {e}")
+        raise HTTPException(status_code=500, detail="Catalogue unavailable")
 
 
 # ==============================================================================

@@ -41,6 +41,9 @@ class SensorReading(BaseModel):
     HornHush: Optional[int] = Field(None, description="1 = alarm silenced by user")
     Test: Optional[int] = Field(None, description="1 = test mode active")
 
+    # External sensors (V2.0 Protocol Extension)
+    sensors: Optional[List[dict]] = Field(None, description="Optional array of 0-250 external sensor objects")
+
 
 class DevicePayload(BaseModel):
     """

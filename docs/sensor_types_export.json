@@ -1,0 +1,1707 @@
+[
+  {
+    "typeId": 0,
+    "enumName": "UNKNOWN",
+    "name": "Unknown",
+    "valueFormats": [
+      {
+        "label": "Value[0]",
+        "unit": "",
+        "dataType": "uint"
+      },
+      {
+        "label": "Value[1]",
+        "unit": "",
+        "dataType": "uint"
+      },
+      {
+        "label": "Value[2]",
+        "unit": "",
+        "dataType": "uint"
+      },
+      {
+        "label": "Value[3]",
+        "unit": "",
+        "dataType": "uint"
+      },
+      {
+        "label": "Value[4]",
+        "unit": "",
+        "dataType": "uint"
+      },
+      {
+        "label": "Value[5]",
+        "unit": "",
+        "dataType": "uint"
+      },
+      {
+        "label": "Value[6]",
+        "unit": "",
+        "dataType": "uint"
+      },
+      {
+        "label": "Value[7]",
+        "unit": "",
+        "dataType": "uint"
+      }
+    ]
+  },
+  {
+    "typeId": 1,
+    "enumName": "GENERIC_DIGITAL",
+    "name": "Generic Digital",
+    "valueFormats": [
+      {
+        "label": "State",
+        "unit": "",
+        "dataType": "bool"
+      }
+    ]
+  },
+  {
+    "typeId": 2,
+    "enumName": "GENERIC_ANALOG",
+    "name": "Generic Analog",
+    "valueFormats": [
+      {
+        "label": "Reading",
+        "unit": "",
+        "dataType": "float"
+      }
+    ]
+  },
+  {
+    "typeId": 3,
+    "enumName": "GENERIC_ANALOG_DIGITAL",
+    "name": "Generic Analog + Digital",
+    "valueFormats": [
+      {
+        "label": "Analog",
+        "unit": "",
+        "dataType": "float"
+      },
+      {
+        "label": "Digital",
+        "unit": "",
+        "dataType": "bool"
+      }
+    ]
+  },
+  {
+    "typeId": 4,
+    "enumName": "GENERIC_MULTI_DIGITAL",
+    "name": "Multi-Channel Digital",
+    "valueFormats": [
+      {
+        "label": "Channel 1",
+        "unit": "",
+        "dataType": "bool"
+      },
+      {
+        "label": "Channel 2",
+        "unit": "",
+        "dataType": "bool"
+      },
+      {
+        "label": "Channel 3",
+        "unit": "",
+        "dataType": "bool"
+      },
+      {
+        "label": "Channel 4",
+        "unit": "",
+        "dataType": "bool"
+      },
+      {
+        "label": "Channel 5",
+        "unit": "",
+        "dataType": "bool"
+      },
+      {
+        "label": "Channel 6",
+        "unit": "",
+        "dataType": "bool"
+      },
+      {
+        "label": "Channel 7",
+        "unit": "",
+        "dataType": "bool"
+      },
+      {
+        "label": "Channel 8",
+        "unit": "",
+        "dataType": "bool"
+      }
+    ]
+  },
+  {
+    "typeId": 5,
+    "enumName": "GENERIC_MULTI_ANALOG",
+    "name": "Multi-Channel Analog",
+    "valueFormats": [
+      {
+        "label": "Channel 1",
+        "unit": "",
+        "dataType": "float"
+      },
+      {
+        "label": "Channel 2",
+        "unit": "",
+        "dataType": "float"
+      },
+      {
+        "label": "Channel 3",
+        "unit": "",
+        "dataType": "float"
+      },
+      {
+        "label": "Channel 4",
+        "unit": "",
+        "dataType": "float"
+      }
+    ]
+  },
+  {
+    "typeId": 6,
+    "enumName": "GENERIC_PWM",
+    "name": "PWM Output",
+    "valueFormats": [
+      {
+        "label": "Duty Cycle",
+        "unit": "%",
+        "dataType": "float"
+      },
+      {
+        "label": "Frequency",
+        "unit": "Hz",
+        "dataType": "float"
+      }
+    ]
+  },
+  {
+    "typeId": 7,
+    "enumName": "TEMP_HUMIDITY",
+    "name": "Temperature & Humidity",
+    "valueFormats": [
+      {
+        "label": "Temperature",
+        "unit": "°C",
+        "dataType": "float"
+      },
+      {
+        "label": "Humidity",
+        "unit": "RH%",
+        "dataType": "float"
+      }
+    ]
+  },
+  {
+    "typeId": 8,
+    "enumName": "TEMP_HUMIDITY_PRESSURE",
+    "name": "Temperature, Humidity & Pressure",
+    "valueFormats": [
+      {
+        "label": "Temperature",
+        "unit": "°C",
+        "dataType": "float"
+      },
+      {
+        "label": "Humidity",
+        "unit": "RH%",
+        "dataType": "float"
+      },
+      {
+        "label": "Pressure",
+        "unit": "hPa",
+        "dataType": "float"
+      }
+    ]
+  },
+  {
+    "typeId": 9,
+    "enumName": "TEMP_HUMIDITY_PRESSURE_GAS",
+    "name": "Temperature, Humidity, Pressure & Gas (BME688)",
+    "valueFormats": [
+      {
+        "label": "Temperature",
+        "unit": "°C",
+        "dataType": "float"
+      },
+      {
+        "label": "Humidity",
+        "unit": "RH%",
+        "dataType": "float"
+      },
+      {
+        "label": "Pressure",
+        "unit": "hPa",
+        "dataType": "float"
+      },
+      {
+        "label": "Gas Resistance",
+        "unit": "kΩ",
+        "dataType": "float"
+      },
+      {
+        "label": "Air Quality Index",
+        "unit": "%",
+        "dataType": "float"
+      }
+    ]
+  },
+  {
+    "typeId": 10,
+    "enumName": "CO2_TVOC",
+    "name": "CO₂ & TVOC",
+    "valueFormats": [
+      {
+        "label": "CO₂",
+        "unit": "ppm",
+        "dataType": "float"
+      },
+      {
+        "label": "TVOC",
+        "unit": "ppb",
+        "dataType": "float"
+      }
+    ]
+  },
+  {
+    "typeId": 11,
+    "enumName": "PARTICULATE",
+    "name": "Particulate Matter",
+    "valueFormats": [
+      {
+        "label": "PM2.5",
+        "unit": "μg/m³",
+        "dataType": "float"
+      },
+      {
+        "label": "PM10",
+        "unit": "μg/m³",
+        "dataType": "float"
+      }
+    ]
+  },
+  {
+    "typeId": 12,
+    "enumName": "CO_GAS",
+    "name": "Carbon Monoxide / Gas",
+    "valueFormats": [
+      {
+        "label": "CO",
+        "unit": "ppm",
+        "dataType": "float"
+      },
+      {
+        "label": "Raw Resistance",
+        "unit": "Ω",
+        "dataType": "float"
+      }
+    ]
+  },
+  {
+    "typeId": 13,
+    "enumName": "OZONE",
+    "name": "Ozone",
+    "valueFormats": [
+      {
+        "label": "O₃",
+        "unit": "ppb",
+        "dataType": "float"
+      }
+    ]
+  },
+  {
+    "typeId": 14,
+    "enumName": "FORMALDEHYDE",
+    "name": "Formaldehyde",
+    "valueFormats": [
+      {
+        "label": "CH₂O",
+        "unit": "mg/m³",
+        "dataType": "float"
+      }
+    ]
+  },
+  {
+    "typeId": 15,
+    "enumName": "AMMONIA",
+    "name": "Ammonia",
+    "valueFormats": [
+      {
+        "label": "NH₃",
+        "unit": "ppm",
+        "dataType": "float"
+      }
+    ]
+  },
+  {
+    "typeId": 16,
+    "enumName": "METHANE_LPG",
+    "name": "Methane / LPG",
+    "valueFormats": [
+      {
+        "label": "CH₄",
+        "unit": "ppm",
+        "dataType": "float"
+      },
+      {
+        "label": "LPG",
+        "unit": "ppm",
+        "dataType": "float"
+      }
+    ]
+  },
+  {
+    "typeId": 17,
+    "enumName": "HYDROGEN",
+    "name": "Hydrogen",
+    "valueFormats": [
+      {
+        "label": "H₂",
+        "unit": "ppm",
+        "dataType": "float"
+      }
+    ]
+  },
+  {
+    "typeId": 18,
+    "enumName": "RADON",
+    "name": "Radon",
+    "valueFormats": [
+      {
+        "label": "Radon",
+        "unit": "Bq/m³",
+        "dataType": "float"
+      }
+    ]
+  },
+  {
+    "typeId": 19,
+    "enumName": "TEMP_ONLY",
+    "name": "Temperature Only",
+    "valueFormats": [
+      {
+        "label": "Temperature",
+        "unit": "°C",
+        "dataType": "float"
+      }
+    ]
+  },
+  {
+    "typeId": 20,
+    "enumName": "LIQUID_LEVEL",
+    "name": "Liquid Level",
+    "valueFormats": [
+      {
+        "label": "Level",
+        "unit": "cm",
+        "dataType": "float"
+      }
+    ]
+  },
+  {
+    "typeId": 21,
+    "enumName": "AIRFLOW",
+    "name": "Airflow",
+    "valueFormats": [
+      {
+        "label": "Flow Rate",
+        "unit": "m³/s",
+        "dataType": "float"
+      }
+    ]
+  },
+  {
+    "typeId": 22,
+    "enumName": "FLUID_PRESSURE",
+    "name": "Fluid Pressure",
+    "valueFormats": [
+      {
+        "label": "Pressure",
+        "unit": "kPa",
+        "dataType": "float"
+      }
+    ]
+  },
+  {
+    "typeId": 23,
+    "enumName": "DISTANCE",
+    "name": "Distance",
+    "valueFormats": [
+      {
+        "label": "Distance",
+        "unit": "cm",
+        "dataType": "float"
+      }
+    ]
+  },
+  {
+    "typeId": 24,
+    "enumName": "WEIGHT_LOAD",
+    "name": "Weight / Load",
+    "valueFormats": [
+      {
+        "label": "Weight",
+        "unit": "g",
+        "dataType": "float"
+      }
+    ]
+  },
+  {
+    "typeId": 25,
+    "enumName": "FLOW_RATE_LIQUID",
+    "name": "Liquid Flow Rate",
+    "valueFormats": [
+      {
+        "label": "Flow Rate",
+        "unit": "L/min",
+        "dataType": "float"
+      }
+    ]
+  },
+  {
+    "typeId": 26,
+    "enumName": "VIBRATION",
+    "name": "Vibration",
+    "valueFormats": [
+      {
+        "label": "Amplitude",
+        "unit": "g",
+        "dataType": "float"
+      },
+      {
+        "label": "Frequency",
+        "unit": "Hz",
+        "dataType": "float"
+      }
+    ]
+  },
+  {
+    "typeId": 27,
+    "enumName": "RAIN_GAUGE",
+    "name": "Rain Gauge",
+    "valueFormats": [
+      {
+        "label": "Accumulation",
+        "unit": "mm",
+        "dataType": "float"
+      },
+      {
+        "label": "Rate",
+        "unit": "mm/h",
+        "dataType": "float"
+      }
+    ]
+  },
+  {
+    "typeId": 28,
+    "enumName": "WIND_SPEED_DIR",
+    "name": "Wind Speed & Direction",
+    "valueFormats": [
+      {
+        "label": "Speed",
+        "unit": "m/s",
+        "dataType": "float"
+      },
+      {
+        "label": "Direction",
+        "unit": "°",
+        "dataType": "float"
+      }
+    ]
+  },
+  {
+    "typeId": 29,
+    "enumName": "STRAIN_GAUGE",
+    "name": "Strain Gauge",
+    "valueFormats": [
+      {
+        "label": "Strain",
+        "unit": "µε",
+        "dataType": "float"
+      }
+    ]
+  },
+  {
+    "typeId": 30,
+    "enumName": "LIGHT_INTENSITY",
+    "name": "Light Intensity",
+    "valueFormats": [
+      {
+        "label": "Illuminance",
+        "unit": "lux",
+        "dataType": "float"
+      }
+    ]
+  },
+  {
+    "typeId": 31,
+    "enumName": "UV_INDEX",
+    "name": "UV Index",
+    "valueFormats": [
+      {
+        "label": "UV Index",
+        "unit": "",
+        "dataType": "float"
+      },
+      {
+        "label": "UV Irradiance",
+        "unit": "mW/cm²",
+        "dataType": "float"
+      }
+    ]
+  },
+  {
+    "typeId": 32,
+    "enumName": "PIR_MOTION",
+    "name": "PIR Motion",
+    "valueFormats": [
+      {
+        "label": "Motion Detected",
+        "unit": "",
+        "dataType": "bool"
+      }
+    ]
+  },
+  {
+    "typeId": 33,
+    "enumName": "RADAR_PRESENCE",
+    "name": "Radar Presence",
+    "valueFormats": [
+      {
+        "label": "Presence",
+        "unit": "",
+        "dataType": "bool"
+      },
+      {
+        "label": "Distance",
+        "unit": "cm",
+        "dataType": "float"
+      }
+    ]
+  },
+  {
+    "typeId": 34,
+    "enumName": "IR_THERMAL_ARRAY",
+    "name": "IR Thermal Array (AMG8833)",
+    "valueFormats": [
+      {
+        "label": "Min Temp",
+        "unit": "°C",
+        "dataType": "float"
+      },
+      {
+        "label": "Max Temp",
+        "unit": "°C",
+        "dataType": "float"
+      },
+      {
+        "label": "Mean Temp",
+        "unit": "°C",
+        "dataType": "float"
+      }
+    ]
+  },
+  {
+    "typeId": 35,
+    "enumName": "COLOR_RGB",
+    "name": "Color / RGB Sensor",
+    "valueFormats": [
+      {
+        "label": "Red",
+        "unit": "",
+        "dataType": "float"
+      },
+      {
+        "label": "Green",
+        "unit": "",
+        "dataType": "float"
+      },
+      {
+        "label": "Blue",
+        "unit": "",
+        "dataType": "float"
+      },
+      {
+        "label": "Clear Lux",
+        "unit": "lux",
+        "dataType": "float"
+      }
+    ]
+  },
+  {
+    "typeId": 36,
+    "enumName": "FLAME_IR",
+    "name": "Flame / IR Sensor",
+    "valueFormats": [
+      {
+        "label": "Intensity",
+        "unit": "",
+        "dataType": "float"
+      },
+      {
+        "label": "Flame Detected",
+        "unit": "",
+        "dataType": "bool"
+      }
+    ]
+  },
+  {
+    "typeId": 37,
+    "enumName": "LASER_BREAK_BEAM",
+    "name": "Laser / Break Beam",
+    "valueFormats": [
+      {
+        "label": "Beam Broken",
+        "unit": "",
+        "dataType": "bool"
+      },
+      {
+        "label": "Break Count",
+        "unit": "",
+        "dataType": "uint"
+      }
+    ]
+  },
+  {
+    "typeId": 38,
+    "enumName": "MICROWAVE_PRESENCE",
+    "name": "Microwave Presence (RCWL-0516)",
+    "valueFormats": [
+      {
+        "label": "Presence",
+        "unit": "",
+        "dataType": "bool"
+      }
+    ]
+  },
+  {
+    "typeId": 40,
+    "enumName": "ACCEL_GYRO",
+    "name": "Accelerometer & Gyroscope (6-DOF)",
+    "valueFormats": [
+      {
+        "label": "Accel X",
+        "unit": "m/s²",
+        "dataType": "float"
+      },
+      {
+        "label": "Accel Y",
+        "unit": "m/s²",
+        "dataType": "float"
+      },
+      {
+        "label": "Accel Z",
+        "unit": "m/s²",
+        "dataType": "float"
+      },
+      {
+        "label": "Gyro X",
+        "unit": "°/s",
+        "dataType": "float"
+      },
+      {
+        "label": "Gyro Y",
+        "unit": "°/s",
+        "dataType": "float"
+      },
+      {
+        "label": "Gyro Z",
+        "unit": "°/s",
+        "dataType": "float"
+      }
+    ]
+  },
+  {
+    "typeId": 41,
+    "enumName": "MAG_COMPASS",
+    "name": "Magnetometer / Compass",
+    "valueFormats": [
+      {
+        "label": "Mag X",
+        "unit": "µT",
+        "dataType": "float"
+      },
+      {
+        "label": "Mag Y",
+        "unit": "µT",
+        "dataType": "float"
+      },
+      {
+        "label": "Mag Z",
+        "unit": "µT",
+        "dataType": "float"
+      }
+    ]
+  },
+  {
+    "typeId": 42,
+    "enumName": "ACCEL_GYRO_MAG",
+    "name": "IMU 9-DOF (Accel + Gyro + Mag)",
+    "valueFormats": [
+      {
+        "label": "Accel X",
+        "unit": "m/s²",
+        "dataType": "float"
+      },
+      {
+        "label": "Accel Y",
+        "unit": "m/s²",
+        "dataType": "float"
+      },
+      {
+        "label": "Accel Z",
+        "unit": "m/s²",
+        "dataType": "float"
+      },
+      {
+        "label": "Gyro X",
+        "unit": "°/s",
+        "dataType": "float"
+      },
+      {
+        "label": "Gyro Y",
+        "unit": "°/s",
+        "dataType": "float"
+      },
+      {
+        "label": "Gyro Z",
+        "unit": "°/s",
+        "dataType": "float"
+      },
+      {
+        "label": "Mag X",
+        "unit": "µT",
+        "dataType": "float"
+      },
+      {
+        "label": "Mag Y",
+        "unit": "µT",
+        "dataType": "float"
+      },
+      {
+        "label": "Mag Z",
+        "unit": "µT",
+        "dataType": "float"
+      }
+    ]
+  },
+  {
+    "typeId": 43,
+    "enumName": "TILT_INCLINOMETER",
+    "name": "Tilt / Inclinometer",
+    "valueFormats": [
+      {
+        "label": "Pitch",
+        "unit": "°",
+        "dataType": "float"
+      },
+      {
+        "label": "Roll",
+        "unit": "°",
+        "dataType": "float"
+      }
+    ]
+  },
+  {
+    "typeId": 44,
+    "enumName": "GPS_POSITION",
+    "name": "GPS Position",
+    "valueFormats": [
+      {
+        "label": "Latitude",
+        "unit": "°",
+        "dataType": "float"
+      },
+      {
+        "label": "Longitude",
+        "unit": "°",
+        "dataType": "float"
+      },
+      {
+        "label": "Altitude",
+        "unit": "m",
+        "dataType": "float"
+      },
+      {
+        "label": "Speed",
+        "unit": "m/s",
+        "dataType": "float"
+      }
+    ]
+  },
+  {
+    "typeId": 45,
+    "enumName": "ROTARY_ENCODER",
+    "name": "Rotary Encoder",
+    "valueFormats": [
+      {
+        "label": "Count",
+        "unit": "",
+        "dataType": "int"
+      },
+      {
+        "label": "RPM",
+        "unit": "RPM",
+        "dataType": "float"
+      }
+    ]
+  },
+  {
+    "typeId": 50,
+    "enumName": "BASE_CAPACITANCE",
+    "name": "Base (4-Pad Capacitance)",
+    "valueFormats": [
+      {
+        "label": "Capacitance 1",
+        "unit": "",
+        "dataType": "uint"
+      },
+      {
+        "label": "Capacitance 2",
+        "unit": "",
+        "dataType": "uint"
+      },
+      {
+        "label": "Capacitance 3",
+        "unit": "",
+        "dataType": "uint"
+      },
+      {
+        "label": "Capacitance 4",
+        "unit": "",
+        "dataType": "uint"
+      }
+    ]
+  },
+  {
+    "typeId": 51,
+    "enumName": "RODENT_TRAP",
+    "name": "Rodent Trap",
+    "valueFormats": [
+      {
+        "label": "Trap Triggered",
+        "unit": "",
+        "dataType": "bool"
+      },
+      {
+        "label": "Confirmed Kill",
+        "unit": "",
+        "dataType": "bool"
+      }
+    ]
+  },
+  {
+    "typeId": 52,
+    "enumName": "BEDBUG_DETECTION",
+    "name": "Bedbug Detection",
+    "valueFormats": [
+      {
+        "label": "Capacitance 1",
+        "unit": "",
+        "dataType": "uint"
+      },
+      {
+        "label": "Capacitance 2",
+        "unit": "",
+        "dataType": "uint"
+      },
+      {
+        "label": "Capacitance 3",
+        "unit": "",
+        "dataType": "uint"
+      },
+      {
+        "label": "Capacitance 4",
+        "unit": "",
+        "dataType": "uint"
+      },
+      {
+        "label": "Detection Count",
+        "unit": "",
+        "dataType": "uint"
+      },
+      {
+        "label": "Detection Sum",
+        "unit": "",
+        "dataType": "uint"
+      },
+      {
+        "label": "Raw Left",
+        "unit": "",
+        "dataType": "uint"
+      },
+      {
+        "label": "Raw Right",
+        "unit": "",
+        "dataType": "uint"
+      }
+    ]
+  },
+  {
+    "typeId": 60,
+    "enumName": "IR_INSECT_COUNTER",
+    "name": "IR Insect Counter",
+    "valueFormats": [
+      {
+        "label": "Count",
+        "unit": "",
+        "dataType": "uint"
+      },
+      {
+        "label": "Rate",
+        "unit": "/h",
+        "dataType": "float"
+      }
+    ]
+  },
+  {
+    "typeId": 61,
+    "enumName": "PHEROMONE_TRAP",
+    "name": "Pheromone Trap",
+    "valueFormats": [
+      {
+        "label": "Catch Count",
+        "unit": "",
+        "dataType": "uint"
+      },
+      {
+        "label": "Trap Weight",
+        "unit": "g",
+        "dataType": "float"
+      }
+    ]
+  },
+  {
+    "typeId": 62,
+    "enumName": "ULTRASONIC_PEST_REPELLER",
+    "name": "Ultrasonic Pest Repeller Status",
+    "valueFormats": [
+      {
+        "label": "Active",
+        "unit": "",
+        "dataType": "bool"
+      },
+      {
+        "label": "Frequency",
+        "unit": "kHz",
+        "dataType": "float"
+      }
+    ]
+  },
+  {
+    "typeId": 63,
+    "enumName": "BAIT_STATION",
+    "name": "Bait Station Monitor",
+    "valueFormats": [
+      {
+        "label": "Bait Remaining",
+        "unit": "g",
+        "dataType": "float"
+      },
+      {
+        "label": "Tampered",
+        "unit": "",
+        "dataType": "bool"
+      }
+    ]
+  },
+  {
+    "typeId": 64,
+    "enumName": "SNAP_TRAP_ELECTRONIC",
+    "name": "Electronic Snap Trap",
+    "valueFormats": [
+      {
+        "label": "Trigger Count",
+        "unit": "",
+        "dataType": "uint"
+      },
+      {
+        "label": "Armed",
+        "unit": "",
+        "dataType": "bool"
+      }
+    ]
+  },
+  {
+    "typeId": 65,
+    "enumName": "GLUE_BOARD",
+    "name": "Glue Board Monitor",
+    "valueFormats": [
+      {
+        "label": "Weight Delta",
+        "unit": "g",
+        "dataType": "float"
+      },
+      {
+        "label": "Triggered",
+        "unit": "",
+        "dataType": "bool"
+      }
+    ]
+  },
+  {
+    "typeId": 66,
+    "enumName": "BIRD_DETERRENT",
+    "name": "Bird Deterrent Status",
+    "valueFormats": [
+      {
+        "label": "Active",
+        "unit": "",
+        "dataType": "bool"
+      },
+      {
+        "label": "Activation Count",
+        "unit": "",
+        "dataType": "uint"
+      }
+    ]
+  },
+  {
+    "typeId": 70,
+    "enumName": "SMOKE_ANALOG",
+    "name": "Smoke Sensor (Analog)",
+    "valueFormats": [
+      {
+        "label": "Raw",
+        "unit": "",
+        "dataType": "float"
+      },
+      {
+        "label": "Alarm",
+        "unit": "",
+        "dataType": "bool"
+      }
+    ]
+  },
+  {
+    "typeId": 71,
+    "enumName": "GLASS_BREAK",
+    "name": "Glass Break Detector",
+    "valueFormats": [
+      {
+        "label": "Break Detected",
+        "unit": "",
+        "dataType": "bool"
+      },
+      {
+        "label": "Peak Level",
+        "unit": "dB",
+        "dataType": "float"
+      }
+    ]
+  },
+  {
+    "typeId": 72,
+    "enumName": "DOOR_WINDOW_CONTACT",
+    "name": "Door / Window Contact",
+    "valueFormats": [
+      {
+        "label": "Open",
+        "unit": "",
+        "dataType": "bool"
+      }
+    ]
+  },
+  {
+    "typeId": 73,
+    "enumName": "WATER_LEAK",
+    "name": "Water Leak Detector",
+    "valueFormats": [
+      {
+        "label": "Leak Detected",
+        "unit": "",
+        "dataType": "bool"
+      },
+      {
+        "label": "Conductivity",
+        "unit": "µS",
+        "dataType": "float"
+      }
+    ]
+  },
+  {
+    "typeId": 74,
+    "enumName": "GAS_LEAK_COMBUSTIBLE",
+    "name": "Combustible Gas Leak",
+    "valueFormats": [
+      {
+        "label": "Gas Level",
+        "unit": "ppm",
+        "dataType": "float"
+      },
+      {
+        "label": "Alarm",
+        "unit": "",
+        "dataType": "bool"
+      }
+    ]
+  },
+  {
+    "typeId": 75,
+    "enumName": "PANIC_BUTTON",
+    "name": "Panic Button",
+    "valueFormats": [
+      {
+        "label": "Pressed",
+        "unit": "",
+        "dataType": "bool"
+      }
+    ]
+  },
+  {
+    "typeId": 76,
+    "enumName": "SIREN_STATUS",
+    "name": "Siren Status",
+    "valueFormats": [
+      {
+        "label": "Active",
+        "unit": "",
+        "dataType": "bool"
+      },
+      {
+        "label": "On Duration",
+        "unit": "s",
+        "dataType": "float"
+      }
+    ]
+  },
+  {
+    "typeId": 77,
+    "enumName": "LOCK_STATUS",
+    "name": "Lock Status",
+    "valueFormats": [
+      {
+        "label": "Locked",
+        "unit": "",
+        "dataType": "bool"
+      }
+    ]
+  },
+  {
+    "typeId": 78,
+    "enumName": "TAMPER_SWITCH",
+    "name": "Tamper Switch",
+    "valueFormats": [
+      {
+        "label": "Tampered",
+        "unit": "",
+        "dataType": "bool"
+      }
+    ]
+  },
+  {
+    "typeId": 80,
+    "enumName": "CURRENT_CLAMP",
+    "name": "Current Clamp (CT)",
+    "valueFormats": [
+      {
+        "label": "Current",
+        "unit": "A",
+        "dataType": "float"
+      }
+    ]
+  },
+  {
+    "typeId": 81,
+    "enumName": "VOLTAGE_SENSOR",
+    "name": "Voltage Sensor",
+    "valueFormats": [
+      {
+        "label": "Voltage",
+        "unit": "V",
+        "dataType": "float"
+      }
+    ]
+  },
+  {
+    "typeId": 82,
+    "enumName": "POWER_ENERGY",
+    "name": "Power & Energy Monitor",
+    "valueFormats": [
+      {
+        "label": "Power",
+        "unit": "W",
+        "dataType": "float"
+      },
+      {
+        "label": "Energy",
+        "unit": "kWh",
+        "dataType": "float"
+      },
+      {
+        "label": "Power Factor",
+        "unit": "",
+        "dataType": "float"
+      }
+    ]
+  },
+  {
+    "typeId": 83,
+    "enumName": "RELAY_STATE",
+    "name": "Relay State",
+    "valueFormats": [
+      {
+        "label": "Relay 1",
+        "unit": "",
+        "dataType": "bool"
+      },
+      {
+        "label": "Relay 2",
+        "unit": "",
+        "dataType": "bool"
+      },
+      {
+        "label": "Relay 3",
+        "unit": "",
+        "dataType": "bool"
+      },
+      {
+        "label": "Relay 4",
+        "unit": "",
+        "dataType": "bool"
+      }
+    ]
+  },
+  {
+    "typeId": 84,
+    "enumName": "BATTERY_MONITOR",
+    "name": "Battery Monitor",
+    "valueFormats": [
+      {
+        "label": "Voltage",
+        "unit": "V",
+        "dataType": "float"
+      },
+      {
+        "label": "Current",
+        "unit": "A",
+        "dataType": "float"
+      },
+      {
+        "label": "Remaining",
+        "unit": "mAh",
+        "dataType": "float"
+      }
+    ]
+  },
+  {
+    "typeId": 85,
+    "enumName": "SOLAR_PANEL",
+    "name": "Solar Panel Monitor",
+    "valueFormats": [
+      {
+        "label": "Voltage",
+        "unit": "V",
+        "dataType": "float"
+      },
+      {
+        "label": "Current",
+        "unit": "A",
+        "dataType": "float"
+      },
+      {
+        "label": "Power",
+        "unit": "W",
+        "dataType": "float"
+      }
+    ]
+  },
+  {
+    "typeId": 90,
+    "enumName": "BILGE_LEVEL",
+    "name": "Bilge Level",
+    "valueFormats": [
+      {
+        "label": "Level",
+        "unit": "cm",
+        "dataType": "float"
+      },
+      {
+        "label": "High Alarm",
+        "unit": "",
+        "dataType": "bool"
+      }
+    ]
+  },
+  {
+    "typeId": 91,
+    "enumName": "SEA_WATER_TEMP",
+    "name": "Sea Water Temperature",
+    "valueFormats": [
+      {
+        "label": "Temperature",
+        "unit": "°C",
+        "dataType": "float"
+      }
+    ]
+  },
+  {
+    "typeId": 92,
+    "enumName": "HULL_STRAIN",
+    "name": "Hull Strain",
+    "valueFormats": [
+      {
+        "label": "Strain",
+        "unit": "µε",
+        "dataType": "float"
+      },
+      {
+        "label": "Comp Temp",
+        "unit": "°C",
+        "dataType": "float"
+      }
+    ]
+  },
+  {
+    "typeId": 93,
+    "enumName": "ANCHOR_CHAIN_LOAD",
+    "name": "Anchor Chain Load",
+    "valueFormats": [
+      {
+        "label": "Tension",
+        "unit": "kN",
+        "dataType": "float"
+      }
+    ]
+  },
+  {
+    "typeId": 94,
+    "enumName": "FUEL_LEVEL",
+    "name": "Fuel Level",
+    "valueFormats": [
+      {
+        "label": "Volume",
+        "unit": "L",
+        "dataType": "float"
+      },
+      {
+        "label": "Percentage",
+        "unit": "%",
+        "dataType": "float"
+      }
+    ]
+  },
+  {
+    "typeId": 95,
+    "enumName": "EXHAUST_GAS_TEMP",
+    "name": "Exhaust Gas Temperature",
+    "valueFormats": [
+      {
+        "label": "Temperature",
+        "unit": "°C",
+        "dataType": "float"
+      }
+    ]
+  },
+  {
+    "typeId": 96,
+    "enumName": "RUDDER_ANGLE",
+    "name": "Rudder Angle",
+    "valueFormats": [
+      {
+        "label": "Angle",
+        "unit": "°",
+        "dataType": "float"
+      }
+    ]
+  },
+  {
+    "typeId": 97,
+    "enumName": "TANK_LEVEL",
+    "name": "Tank Level (Generic)",
+    "valueFormats": [
+      {
+        "label": "Volume",
+        "unit": "L",
+        "dataType": "float"
+      },
+      {
+        "label": "Percentage",
+        "unit": "%",
+        "dataType": "float"
+      }
+    ]
+  },
+  {
+    "typeId": 98,
+    "enumName": "ENGINE_RPM",
+    "name": "Engine RPM",
+    "valueFormats": [
+      {
+        "label": "RPM",
+        "unit": "RPM",
+        "dataType": "float"
+      }
+    ]
+  },
+  {
+    "typeId": 99,
+    "enumName": "IBEACON",
+    "name": "iBeacon",
+    "valueFormats": [
+      {
+        "label": "RSSI",
+        "unit": "dBm",
+        "dataType": "float"
+      },
+      {
+        "label": "Distance Estimate",
+        "unit": "m",
+        "dataType": "float"
+      }
+    ]
+  },
+  {
+    "typeId": 100,
+    "enumName": "SOUND_LEVEL",
+    "name": "Sound Level Meter",
+    "valueFormats": [
+      {
+        "label": "Level A-weighted",
+        "unit": "dBA",
+        "dataType": "float"
+      },
+      {
+        "label": "Level C-weighted",
+        "unit": "dBC",
+        "dataType": "float"
+      }
+    ]
+  },
+  {
+    "typeId": 101,
+    "enumName": "FREQUENCY_ANALYSIS",
+    "name": "Frequency Analysis",
+    "valueFormats": [
+      {
+        "label": "Dominant Freq",
+        "unit": "Hz",
+        "dataType": "float"
+      },
+      {
+        "label": "Peak Level",
+        "unit": "dB",
+        "dataType": "float"
+      }
+    ]
+  },
+  {
+    "typeId": 102,
+    "enumName": "ULTRASONIC_DETECT",
+    "name": "Ultrasonic Detection",
+    "valueFormats": [
+      {
+        "label": "Detected",
+        "unit": "",
+        "dataType": "bool"
+      },
+      {
+        "label": "Level",
+        "unit": "dB",
+        "dataType": "float"
+      }
+    ]
+  },
+  {
+    "typeId": 110,
+    "enumName": "SOIL_MOISTURE",
+    "name": "Soil Moisture",
+    "valueFormats": [
+      {
+        "label": "VWC",
+        "unit": "%",
+        "dataType": "float"
+      }
+    ]
+  },
+  {
+    "typeId": 111,
+    "enumName": "SOIL_TEMP_MOISTURE",
+    "name": "Soil Temperature & Moisture",
+    "valueFormats": [
+      {
+        "label": "Temperature",
+        "unit": "°C",
+        "dataType": "float"
+      },
+      {
+        "label": "VWC",
+        "unit": "%",
+        "dataType": "float"
+      }
+    ]
+  },
+  {
+    "typeId": 112,
+    "enumName": "SOIL_NPK",
+    "name": "Soil NPK",
+    "valueFormats": [
+      {
+        "label": "Nitrogen",
+        "unit": "mg/kg",
+        "dataType": "float"
+      },
+      {
+        "label": "Phosphorus",
+        "unit": "mg/kg",
+        "dataType": "float"
+      },
+      {
+        "label": "Potassium",
+        "unit": "mg/kg",
+        "dataType": "float"
+      }
+    ]
+  },
+  {
+    "typeId": 113,
+    "enumName": "LEAF_WETNESS",
+    "name": "Leaf Wetness",
+    "valueFormats": [
+      {
+        "label": "Wetness",
+        "unit": "%",
+        "dataType": "float"
+      }
+    ]
+  },
+  {
+    "typeId": 114,
+    "enumName": "PAR_LIGHT",
+    "name": "PAR Light (Photosynthetic)",
+    "valueFormats": [
+      {
+        "label": "PAR",
+        "unit": "µmol/m²/s",
+        "dataType": "float"
+      }
+    ]
+  },
+  {
+    "typeId": 115,
+    "enumName": "WIND_RAIN_STATION",
+    "name": "Ag Weather Station",
+    "valueFormats": [
+      {
+        "label": "Wind Speed",
+        "unit": "m/s",
+        "dataType": "float"
+      },
+      {
+        "label": "Wind Dir",
+        "unit": "°",
+        "dataType": "float"
+      },
+      {
+        "label": "Rain",
+        "unit": "mm",
+        "dataType": "float"
+      },
+      {
+        "label": "Temperature",
+        "unit": "°C",
+        "dataType": "float"
+      },
+      {
+        "label": "Humidity",
+        "unit": "RH%",
+        "dataType": "float"
+      }
+    ]
+  },
+  {
+    "typeId": 120,
+    "enumName": "PH_SENSOR",
+    "name": "pH Sensor",
+    "valueFormats": [
+      {
+        "label": "pH",
+        "unit": "",
+        "dataType": "float"
+      }
+    ]
+  },
+  {
+    "typeId": 121,
+    "enumName": "TDS_EC",
+    "name": "TDS / EC",
+    "valueFormats": [
+      {
+        "label": "TDS",
+        "unit": "ppm",
+        "dataType": "float"
+      },
+      {
+        "label": "EC",
+        "unit": "µS/cm",
+        "dataType": "float"
+      }
+    ]
+  },
+  {
+    "typeId": 122,
+    "enumName": "TURBIDITY",
+    "name": "Turbidity",
+    "valueFormats": [
+      {
+        "label": "Turbidity",
+        "unit": "NTU",
+        "dataType": "float"
+      }
+    ]
+  },
+  {
+    "typeId": 123,
+    "enumName": "DISSOLVED_OXYGEN",
+    "name": "Dissolved Oxygen",
+    "valueFormats": [
+      {
+        "label": "DO",
+        "unit": "mg/L",
+        "dataType": "float"
+      },
+      {
+        "label": "Saturation",
+        "unit": "%",
+        "dataType": "float"
+      }
+    ]
+  },
+  {
+    "typeId": 124,
+    "enumName": "ORP_REDOX",
+    "name": "ORP / Redox",
+    "valueFormats": [
+      {
+        "label": "ORP",
+        "unit": "mV",
+        "dataType": "float"
+      }
+    ]
+  },
+  {
+    "typeId": 125,
+    "enumName": "WATER_TEMP_PH_EC",
+    "name": "Water Temp + pH + EC",
+    "valueFormats": [
+      {
+        "label": "Temperature",
+        "unit": "°C",
+        "dataType": "float"
+      },
+      {
+        "label": "pH",
+        "unit": "",
+        "dataType": "float"
+      },
+      {
+        "label": "EC",
+        "unit": "µS/cm",
+        "dataType": "float"
+      }
+    ]
+  }
+]

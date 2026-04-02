@@ -68,6 +68,10 @@ class DeviceReading(Base):
     horn_hush = Column(Integer, nullable=True)
     test = Column(Integer, nullable=True)
 
+    # Dynamic External Sensors (V2.0)
+    # Stored as stringified JSON array of sensor objects
+    sensors_json = Column(String, nullable=True)
+
 
 class PendingCommand(Base):
     """
