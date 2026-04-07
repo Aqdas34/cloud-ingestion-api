@@ -277,6 +277,63 @@ async def send_command(
 # ==============================================================================
 
 @app.get(
+    "/devices/summary",
+    summary="Get all devices with their latest sensor reading",
+    tags=["Devices"],
+)
+async def list_devices_summary(
+    db: Session = Depends(get_db),
+    _api_key: str = Depends(verify_api_key),
+):
+    """
+    Returns a unified summary of all registered devices including their 
+    single most recent reading. This is optimized for the dashboard to 
+    load the entire network state in one request.
+    """
+    # 1. Fetch all basic device records
+    devices = db.query(Device).all()
+    
+    # 2. Get the IDs of the latest reading for each device
+    # This is an efficient way to get "Latest per Group" in SQL
+    from sqlalchemy import func
+    latest_ids_subquery = (
+        db.query(func.max(DeviceReading.id))
+        .group_by(DeviceReading.device_id)
+        .all()
+    )
+    latest_ids = [r[0] for r in latest_ids_subquery if r[0] is not None]
+    
+    # 3. Fetch the full reading objects for those IDs
+    latest_readings_map = {}
+    if latest_ids:
+        readings = db.query(DeviceReading).filter(DeviceReading.id.in_(latest_ids)).all()
+        for r in readings:
+            latest_readings_map[r.device_id] = {
+                "received_at": r.received_at,
+                "temperature": r.temperature,
+                "humidity": r.humidity,
+                "aqi": r.aqi,
+                "smoke": r.smoke,
+                "carbon_monoxide": r.carbon_monoxide,
+                "battery_level": r.battery_level,
+                "alarm": r.alarm,
+                "sensors": json.loads(r.sensors_json) if r.sensors_json else None,
+            }
+
+    # 4. Merge
+    return [
+        {
+            "device_id": d.device_id,
+            "first_seen": d.first_seen,
+            "last_seen": d.last_seen,
+            "total_readings": d.total_readings,
+            "latest": latest_readings_map.get(d.device_id)
+        }
+        for d in devices
+    ]
+
+
+@app.get(
     "/devices",
     summary="List all known devices",
     tags=["Devices"],

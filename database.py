@@ -1,5 +1,5 @@
 import os
-from sqlalchemy import create_engine, Column, Integer, Float, String, BigInteger, DateTime
+from sqlalchemy import create_engine, Column, Integer, Float, String, BigInteger, DateTime, Index
 from sqlalchemy.orm import sessionmaker, declarative_base
 from datetime import datetime, timezone
 
@@ -26,6 +26,9 @@ class DeviceReading(Base):
     One record = one entry in the 'data' array from the device payload.
     """
     __tablename__ = "device_readings"
+    __table_args__ = (
+        Index('idx_device_reading_latest', 'device_id', 'received_at'),
+    )
 
     id = Column(Integer, primary_key=True, index=True, autoincrement=True)
     received_at = Column(DateTime, default=lambda: datetime.now(timezone.utc), nullable=False)
